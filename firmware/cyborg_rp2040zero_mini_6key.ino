@@ -65,7 +65,7 @@ uint8_t keyputs[6] = { 0 };
 uint8_t temp_keys[7] = { 0 };
 uint8_t layer_keys[6][10][7] = { 0 };  //layer 6 ,keys 10 ,code 6 + 1 modifier
 char buff[64] = { '\0' };
-String setup_url = "https://cyborg-kb.netlify.app/";
+String setup_url = "https://favorscreation.github.io/kb-setup/";
 String str = "";
 
 volatile int8_t pos1;  //エンコーダー状態を記憶
