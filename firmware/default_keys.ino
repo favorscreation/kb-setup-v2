@@ -61,13 +61,13 @@ void setDefaultKeys() {
 
 
   //layer 2
-  layer_keys[2][0][1] = HID_KEY_NONE;
+  layer_keys[2][0][1] = HID_KEY_PAGE_UP;
   layer_keys[2][0][0] = 0x00;
 
   layer_keys[2][1][1] = HID_KEY_ARROW_UP;
   layer_keys[2][1][0] = 0x00;
 
-  layer_keys[2][2][1] = HID_KEY_NONE;
+  layer_keys[2][2][1] = HID_KEY_PAGE_DOWN;
   layer_keys[2][2][0] = 0x00;
 
   layer_keys[2][3][1] = HID_KEY_ARROW_LEFT;
@@ -87,13 +87,13 @@ void setDefaultKeys() {
 
 
   //layer 3
-  layer_keys[3][0][1] = HID_KEY_C;
+  layer_keys[3][0][1] = HID_KEY_E;
   layer_keys[3][0][0] = 0x00;
 
   layer_keys[3][1][1] = HID_KEY_B;
   layer_keys[3][1][0] = 0x00;
 
-  layer_keys[3][2][1] = HID_KEY_E;
+  layer_keys[3][2][1] = HID_KEY_C;
   layer_keys[3][2][0] = 0x00;
 
   layer_keys[3][3][1] = HID_KEY_Z;
@@ -113,14 +113,14 @@ void setDefaultKeys() {
 
 
   //layer 4
-  layer_keys[4][0][1] = HID_KEY_S;
-  layer_keys[4][0][0] = 0x01;
+  layer_keys[4][0][1] = HID_KEY_E;
+  layer_keys[4][0][0] = 0x00;
 
-  layer_keys[4][1][1] = HID_KEY_E;
+  layer_keys[4][1][1] = HID_KEY_B;
   layer_keys[4][1][0] = 0x00;
 
-  layer_keys[4][2][1] = HID_KEY_B;
-  layer_keys[4][2][0] = 0x00;
+  layer_keys[4][2][1] = HID_KEY_NONE;
+  layer_keys[4][2][0] = 0x04;
 
   layer_keys[4][3][1] = HID_KEY_Z;
   layer_keys[4][3][0] = 0x01;
@@ -128,7 +128,7 @@ void setDefaultKeys() {
   layer_keys[4][4][1] = HID_KEY_Z;
   layer_keys[4][4][0] = 0x03;
 
-  layer_keys[4][5][1] = HID_KEY_SPACE;
+  layer_keys[4][5][1] = HID_KEY_X;
   layer_keys[4][5][0] = 0x00;
 
   layer_keys[4][6][1] = 0x32;
@@ -139,14 +139,14 @@ void setDefaultKeys() {
 
 
   //layer 5
-  layer_keys[5][0][1] = HID_KEY_S;
-  layer_keys[5][0][0] = 0x08;
+  layer_keys[5][0][1] = HID_KEY_E;
+  layer_keys[5][0][0] = 0x00;
 
-  layer_keys[5][1][1] = HID_KEY_E;
+  layer_keys[5][1][1] = HID_KEY_B;
   layer_keys[5][1][0] = 0x00;
 
-  layer_keys[5][2][1] = HID_KEY_B;
-  layer_keys[5][2][0] = 0x00;
+  layer_keys[5][2][1] = HID_KEY_NONE;
+  layer_keys[5][2][0] = 0x04;
 
   layer_keys[5][3][1] = HID_KEY_Z;
   layer_keys[5][3][0] = 0x08;
@@ -154,7 +154,7 @@ void setDefaultKeys() {
   layer_keys[5][4][1] = HID_KEY_Z;
   layer_keys[5][4][0] = 0x0A;
 
-  layer_keys[5][5][1] = HID_KEY_SPACE;
+  layer_keys[5][5][1] = HID_KEY_X;
   layer_keys[5][5][0] = 0x00;
 
   layer_keys[5][6][1] = 0x32;
