@@ -97,6 +97,8 @@ void EEPROM_RESET() {
   off_LEDs();
   delay(1000);
   layers = 0;
+  count = 0;
+  setDefaultKeys();
   init();
 }
 
