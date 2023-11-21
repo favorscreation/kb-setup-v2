@@ -251,6 +251,13 @@ input[type="radio"]:before {
   overflow: hidden;
 }
 
+.helpbutton {
+  width: 30px;
+  height: 30px;
+  float: right;
+  margin: -10px;
+}
+
 #row1 {
   padding: 30px;
 }
