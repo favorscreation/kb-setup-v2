@@ -406,22 +406,22 @@ input[type="radio"]:before {
 }
 
 #connect {
-  width: 150px;
+  width: 180px;
   font-size: 1rem;
 }
 
 #disconnect {
-  width: 150px;
+  width: 180px;
   font-size: 1rem;
 }
 
 #write {
-  width: 150px;
+  width: 180px;
   font-size: 1rem;
 }
 
 #read {
-  width: 150px;
+  width: 180px;
   font-size: 1rem;
 }
 
