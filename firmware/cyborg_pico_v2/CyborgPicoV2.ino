@@ -26,7 +26,12 @@
 #define BRIGHTNESS_ADDRESS 1
 #define ENCINVERT_ADDRESS 2
 #define LAYERMASK_ADDRESS 3
-
+#define LAYER_NAME_0_ADDRESS 100
+#define LAYER_NAME_1_ADDRESS 200
+#define LAYER_NAME_2_ADDRESS 300
+#define LAYER_NAME_3_ADDRESS 400
+#define LAYER_NAME_4_ADDRESS 500
+#define LAYER_NAME_5_ADDRESS 600
 
 //RotaryEncoder
 #define SIGA1 11
@@ -249,10 +254,23 @@ void init() {
       }
     }
   }
+
+  if ("" != readStringFromEEPROM(LAYER_NAME_0_ADDRESS))
+    layer_name[0] = readStringFromEEPROM(LAYER_NAME_0_ADDRESS);
+  if ("" != readStringFromEEPROM(LAYER_NAME_1_ADDRESS))
+    layer_name[1] = readStringFromEEPROM(LAYER_NAME_1_ADDRESS);
+  if ("" != readStringFromEEPROM(LAYER_NAME_2_ADDRESS))
+    layer_name[2] = readStringFromEEPROM(LAYER_NAME_2_ADDRESS);
+  if ("" != readStringFromEEPROM(LAYER_NAME_3_ADDRESS))
+    layer_name[3] = readStringFromEEPROM(LAYER_NAME_3_ADDRESS);
+  if ("" != readStringFromEEPROM(LAYER_NAME_4_ADDRESS))
+    layer_name[4] = readStringFromEEPROM(LAYER_NAME_4_ADDRESS);
+  if ("" != readStringFromEEPROM(LAYER_NAME_5_ADDRESS))
+    layer_name[5] = readStringFromEEPROM(LAYER_NAME_5_ADDRESS);
+
   if (MAXIMUM_BRIGHTNESS < EEPROM.read(BRIGHTNESS_ADDRESS))
     Brightness = MAXIMUM_BRIGHTNESS;
-  else
-    EEPROM.read(BRIGHTNESS_ADDRESS);
+  else EEPROM.read(BRIGHTNESS_ADDRESS);
 
   layerState_led(layers);
 

@@ -90,6 +90,7 @@ void hold_down() {
 }
 
 void EEPROM_RESET() {
+  oled_outputs("EEPROM", 2, "RESET", 2, "", 1);
   strip.setPixelColor(0, 0, 0, 0);
   strip.show();
   Serial.println("-----EEPROM RESET-----");
@@ -100,7 +101,7 @@ void EEPROM_RESET() {
   EEPROM.write(LAYERMASK_ADDRESS, 255);
   EEPROM.commit();
   off_LEDs();
-  delay(1000);
+  delay(3000);
   layers = 0;
   count = 0;
   setDefaultKeys();
@@ -345,6 +346,42 @@ void Switch_function(int input) {
       EEPROM.write(ENCINVERT_ADDRESS, value);
       EEPROM.commit();
       Serial.println("ENCINVERT=" + String(value));
+      init();
+    }
+
+    //LAYERNAME
+    if (str.substring(0, string_cut(str, '_')) == "N") {
+      //レイヤー番号
+      str = str.substring(1 + string_cut(str, '_'));
+      layer_num = str.substring(0, string_cut(str, '_')).toInt();
+
+      str = str.substring(1 + string_cut(str, '_'));
+      switch (layer_num) {
+        case 0:
+          writeStringToEEPROM(LAYER_NAME_0_ADDRESS, str);
+          EEPROM.commit();
+          break;
+        case 1:
+          writeStringToEEPROM(LAYER_NAME_1_ADDRESS, str);
+          EEPROM.commit();
+          break;
+        case 2:
+          writeStringToEEPROM(LAYER_NAME_2_ADDRESS, str);
+          EEPROM.commit();
+          break;
+        case 3:
+          writeStringToEEPROM(LAYER_NAME_3_ADDRESS, str);
+          EEPROM.commit();
+          break;
+        case 4:
+          writeStringToEEPROM(LAYER_NAME_4_ADDRESS, str);
+          EEPROM.commit();
+          break;
+        case 5:
+          writeStringToEEPROM(LAYER_NAME_5_ADDRESS, str);
+          EEPROM.commit();
+          break;
+      }
       init();
     }
 

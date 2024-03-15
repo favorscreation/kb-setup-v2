@@ -231,11 +231,16 @@ void writeStringToEEPROM(int addrOffset, const String &strToWrite) {
   }
 }
 
+//ASCIIコードのみ
 String readStringFromEEPROM(int addrOffset) {
   int newStrLen = EEPROM.read(addrOffset);
   char data[newStrLen + 1];
   for (int i = 0; i < newStrLen; i++) {
     data[i] = EEPROM.read(addrOffset + 1 + i);
+
+    //初期状態0xffの場合は何も出力しない
+    if (data[i] == 0xFF || data[i] == 0x00)
+      return String("");
   }
   data[newStrLen] = '\0';
   return String(data);
