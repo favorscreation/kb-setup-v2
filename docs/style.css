@@ -162,6 +162,7 @@ input[type="radio"]:before {
 }
 
 #apply {
+  margin-top: 5px;
   font-size: 15px;
   font-variant-caps: all-petite-caps;
 }
@@ -249,7 +250,7 @@ input[type="radio"]:before {
   width: 30px;
   height: 30px;
   float: right;
-  margin: -10px;
+  margin: -25px;
 }
 
 #row1 {
