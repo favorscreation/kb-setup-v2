@@ -388,7 +388,41 @@ async function layerMask() {
     const textEncoder = new TextEncoder();
     try {
         const writer = port.writable.getWriter();
-        await writer.write(textEncoder.encode("MASK_" + bit.toString()));
+        await writer.write(textEncoder.encode("MASK_" + bit.toString() + "\n"));
+
+
+        let layername0 = document.getElementById("layerName0").value;
+        let layername1 = document.getElementById("layerName1").value;
+        let layername2 = document.getElementById("layerName2").value;
+        let layername3 = document.getElementById("layerName3").value;
+        let layername4 = document.getElementById("layerName4").value;
+        let layername5 = document.getElementById("layerName5").value;
+
+        if (layername0 != "") {
+            await writer.write(textEncoder.encode("N_" + "0_" + layername0 + "\n"));
+            await wait(50);//Arduino側プログラム実行用遅延
+        }
+        if (layername1 != "") {
+            await writer.write(textEncoder.encode("N_" + "1_" + layername1 + "\n"));
+            await wait(50);
+        }
+        if (layername2 != "") {
+            await writer.write(textEncoder.encode("N_" + "2_" + layername2 + "\n"));
+            await wait(50);
+        }
+        if (layername3 != "") {
+            await writer.write(textEncoder.encode("N_" + "3_" + layername3 + "\n"));
+            await wait(50);
+        }
+        if (layername4 != "") {
+            await writer.write(textEncoder.encode("N_" + "4_" + layername4 + "\n"));
+            await wait(50);
+        }
+        if (layername5 != "") {
+            await writer.write(textEncoder.encode("N_" + "5_" + layername5 + "\n"));
+            await wait(50);
+        }
+
         writer.releaseLock();
     } catch {
         alert("Please connect");

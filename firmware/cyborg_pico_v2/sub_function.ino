@@ -11,8 +11,10 @@ uint16_t en2jp(char ch, uint8_t *mod) {
   if (ch >= 0x61 && ch <= 0x7a)
     return ch - 0x5d;
   //数字
-  if (ch >= 0x30 && ch <= 0x39)
-    return ch - 0x12;
+  if (ch == 0x30)
+    return 0x27;
+  if (ch >= 0x31 && ch <= 0x39)
+    return ch - 0x13;
   //大文字
   if (ch >= 0x41 && ch <= 0x5a) {
     *mod = KEYBOARD_MODIFIER_LEFTSHIFT;

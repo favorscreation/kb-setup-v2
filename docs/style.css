@@ -103,21 +103,16 @@ footer {
 }
 
 .layer {
+  width: max-content;
   position: absolute;
   display: grid;
-  top: 50%;
-  left: 90%;
-  transform: translateY(-50%) translateX(-50%);
-  -webkit-transform: translateY(-50%) translateX(-50%);
-  justify-items: center;
+  top: 0%;
+  left: 80%;
+  /*transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);*/
   border: solid;
   border-color: silver;
   padding: 5px;
-}
-
-.layer input {
-  transform: scale(1.5);
-  width: 20px;
 }
 
 input[type="radio"] {
@@ -169,7 +164,6 @@ input[type="radio"]:before {
 #apply {
   font-size: 15px;
   font-variant-caps: all-petite-caps;
-  width: 50px;
 }
 
 #frame {

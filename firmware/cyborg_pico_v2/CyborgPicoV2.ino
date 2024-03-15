@@ -92,7 +92,7 @@ String layer_name[6] = {
   "LAYER 4",
   "LAYER 5"
 };
-String setup_url = "https://favorscreation.github.io/kb-setup/";
+String setup_url = "https://favorscreation.github.io/kb-setup-v2";
 String str = "";
 
 volatile int8_t pos1;  //エンコーダー状態を記憶
