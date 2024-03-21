@@ -109,9 +109,7 @@ void check_mount() {
 
   if (suspend_state) {
     delay(100);
-    for (int i = 0; i < (int)strip.numPixels(); i++)
-      strip.setPixelColor(i, 0, 0, 0);
-    strip.show();
+    off_LEDs();
   }
 
   if (Serial.dtr() == 1 && serial_state == false) {
@@ -135,6 +133,7 @@ void check_mount() {
   }
 }
 
+//レイヤー状態をLEDで知らせる
 void layerState_led(int s) {
   switch (s) {
     case 0:
@@ -175,10 +174,15 @@ void layerState_led(int s) {
   oled_outputs(layer_name[layers], 2, "", 1, "", 1);
 }
 
+//RGBLEDとOLEDをオフにする
 void off_LEDs() {
   for (int i = 0; i < (int)strip.numPixels(); i++)
     strip.setPixelColor(i, 0, 0, 0);
   strip.show();
+
+  //OLEDクリア
+  display.clearDisplay();
+  display.display();
 }
 
 void pickOneKey(int num, int index) {
@@ -223,6 +227,8 @@ void oled_outputs(String line1, uint8_t size1, String line2, uint8_t size2, Stri
   display.display();
 
   clearCounter = millis();
+
+  OLED_clearflag = false;
 }
 
 void writeStringToEEPROM(int addrOffset, const String &strToWrite) {

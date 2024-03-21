@@ -14,9 +14,10 @@ void save() {
     }
   }
 
-  //5秒経過でディスプレイクリア
-  if (millis() - clearCounter > 5000) {
+  //5秒経過でディスプレイ下2行クリア
+  if ((millis() - clearCounter > 5000) && (OLED_clearflag == false)) {
     oled_outputs(layer_name[layers], 2, "", 1, "", 1);
+    OLED_clearflag = true;
   }
 }
 

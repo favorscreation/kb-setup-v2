@@ -105,6 +105,7 @@ unsigned long watch = 0;
 
 bool state;
 bool layerChangeFlag;
+bool OLED_clearflag = false;
 bool sendURI;
 bool mount_state = false;
 bool serial_state = false;
@@ -187,7 +188,7 @@ void setup() {
   strip.show();  // Initialize all pixels to 'off'
 
   builtin_strip.begin();
-  builtin_strip.setPixelColor(0, 0, 64, 64);
+  builtin_strip.setPixelColor(0, 32, 32, 32);
   builtin_strip.show();
 
   //シリアル通信開始
