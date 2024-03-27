@@ -35,28 +35,28 @@ void setDefaultKeys() {
 
 
   //layer 1
-  layer_keys[1][0][1] = HID_KEY_NONE;
-  layer_keys[1][0][0] = 0x08;
+  layer_keys[1][0][1] = HID_KEY_Q;
+  layer_keys[1][0][0] = 0x00;
 
-  layer_keys[1][1][1] = HID_KEY_NONE;
+  layer_keys[1][1][1] = HID_KEY_W;
   layer_keys[1][1][0] = 0x00;
 
-  layer_keys[1][2][1] = HID_KEY_NONE;
+  layer_keys[1][2][1] = HID_KEY_E;
   layer_keys[1][2][0] = 0x00;
 
-  layer_keys[1][3][1] = HID_KEY_NONE;
-  layer_keys[1][3][0] = 0x01;
+  layer_keys[1][3][1] = HID_KEY_A;
+  layer_keys[1][3][0] = 0x00;
 
-  layer_keys[1][4][1] = HID_KEY_NONE;
-  layer_keys[1][4][0] = 0x02;
+  layer_keys[1][4][1] = HID_KEY_S;
+  layer_keys[1][4][0] = 0x00;
 
-  layer_keys[1][5][1] = HID_KEY_NONE;
-  layer_keys[1][5][0] = 0x04;
+  layer_keys[1][5][1] = HID_KEY_D;
+  layer_keys[1][5][0] = 0x00;
 
-  layer_keys[1][6][1] = HID_KEY_KEYPAD_ADD;
+  layer_keys[1][6][1] = HID_KEY_NONE;
   layer_keys[1][6][0] = 0x00;
 
-  layer_keys[1][7][1] = HID_KEY_KEYPAD_SUBTRACT;
+  layer_keys[1][7][1] = HID_KEY_NONE;
   layer_keys[1][7][0] = 0x00;
 
 
