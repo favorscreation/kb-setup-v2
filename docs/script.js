@@ -425,7 +425,7 @@ async function layerMask() {
 
         writer.releaseLock();
     } catch {
-        alert("Please connect");
+        alert("Please connect \n 接続してください");
     }
 }
 

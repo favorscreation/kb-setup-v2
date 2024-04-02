@@ -16,10 +16,22 @@ body {
 
 footer {
   text-align: center;
-  background-color: #bec4d4;
+  background-color: #474950;
   width: 100vw;
   position: fixed;
   bottom: 0px;
+}
+
+footer a {
+  color: aliceblue;
+}
+
+#footer1 {
+  margin-right: 1rem;
+}
+
+#footer2 {
+  margin-left: 1rem;
 }
 
 #init {
