@@ -34,8 +34,8 @@
 #define LAYER_NAME_5_ADDRESS 600
 
 //RotaryEncoder
-#define SIGA1 11
-#define SIGB1 12
+#define SIGA1 12
+#define SIGB1 11
 //Push Button
 #define PB1 10
 
@@ -202,13 +202,13 @@ void setup() {
   // wait until device mounted
   while (!TinyUSBDevice.mounted()) {
     digitalWrite(LED_BUILTIN, HIGH);
-    strip.setPixelColor(0, 0, 0, 255);
+    strip.setPixelColor(0, 0, 0, 16);
     strip.show();
-    delay(100);
+    delay(500);
     digitalWrite(LED_BUILTIN, LOW);
     strip.setPixelColor(0, 0, 0, 0);
     strip.show();
-    delay(100);
+    delay(500);
   }
   Serial.println("Begin TinyUSB HID");
   mount_state = true;
