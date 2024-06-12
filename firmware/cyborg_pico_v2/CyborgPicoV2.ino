@@ -164,6 +164,14 @@ void setup() {
   pinMode(SIGA1, INPUT_PULLUP);
   pinMode(SIGB1, INPUT_PULLUP);
 
+  pinMode(ROW1, INPUT_PULLUP);
+  pinMode(ROW2, INPUT_PULLUP);
+  pinMode(ROW3, INPUT_PULLUP);
+  pinMode(ROW4, INPUT_PULLUP);
+  pinMode(ROW5, INPUT_PULLUP);
+  pinMode(ROW6, INPUT_PULLUP);
+
+
   rowsCount = (sizeof(rows) / sizeof(rows[0]));
   columnsCount = (sizeof(columns) / sizeof(columns[0]));
 
